@@ -33,22 +33,22 @@ module.exports.postBook = (req, res) => {
 /* for put data of book */
 module.exports.putBook = (req, res) => {
 	let values = {
-		title: req.body.title,
-		desc: req.body.desc,
-		price: req.body.price,
-		size: req.body.size,
-		writer: req.body.writer,
-		publisher: req.body.publisher,
-		page: req.body.page,
-		year_of_publish: req.body.year_of_publish,
-		isbn: req.body.isbn,
-		category: req.body.category
+		title: "Buku Kesehatan",
+		desc: "Ini Buku Kesehatan",
+		price: 700000,
+		size: "25x15cm",
+		writer: "Yuli Rahayu",
+		publisher: "Airlangga",
+		page: "490",
+		year_of_publish: 2018,
+		isbn: 6453487462,
+		category: "Edukasi Kesehatan"
 	}
 	
 	Book
 		.update(values, {
 			where: {
-				id: req.params.id
+				id: 1
 			}
 		})
 		.then((book) => {
