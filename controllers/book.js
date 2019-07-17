@@ -48,7 +48,7 @@ module.exports.putBook = (req, res) => {
 	Book
 		.update(values, {
 			where: {
-				id: req.params.id
+				id: 1
 			}
 		})
 		.then((book) => {
