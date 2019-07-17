@@ -48,7 +48,7 @@ module.exports.putBook = (req, res) => {
 	Book
 		.update(values, {
 			where: {
-				id: 1
+				id: 2
 			}
 		})
 		.then((book) => {
@@ -60,19 +60,15 @@ module.exports.putBook = (req, res) => {
 
 /* delete the book */
 module.exports.deleteBook = (req, res) => {
-	let conditions = {
-		where : {
-			id : 1
+	Book.destroy({
+		where: {
+			id: 2
 		}
-	}
-	
-	Book
-		.destroy(conditions)
-		.then((book) => {
-			res.json(book);
-		}).catch((error) => {
-			throw error;
-		})
+	}).then((book) => {
+		res.json(book);
+	}).catch((error) => {
+		throw error;
+	})
 }
 
 /* view one book by id*/
