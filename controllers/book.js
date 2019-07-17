@@ -62,7 +62,7 @@ module.exports.putBook = (req, res) => {
 module.exports.deleteBook = (req, res) => {
 	let conditions = {
 		where : {
-			id : req.params.id
+			id : 1
 		}
 	}
 	
