@@ -13,7 +13,7 @@ router.get('/', bookController.getBook);
 router.post('/add', bookController.postBook);
 
 /* untuk mengambil data */
-router.put('/edit', bookController.putBook);
+router.put('/edit/:id', bookController.putBook);
 
 /* untuk menghapus buku */
 router.delete('/delete/:id', bookController.deleteBook);
