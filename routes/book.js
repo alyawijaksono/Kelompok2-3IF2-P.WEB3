@@ -16,6 +16,7 @@ router.post('/add', bookController.postBook);
 router.post('/edit/:id', bookController.putBook);
 
 /* untuk menghapus buku */
-router.delete('/delete/:id', bookController.deleteBook);
+//router.delete('/delete/:id', bookController.deleteBook);
+router.post('/delete/:id', bookController.deleteBook);
 
 module.exports = router;
