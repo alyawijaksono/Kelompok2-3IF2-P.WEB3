@@ -12,7 +12,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 const homeRouter = require('./routes/home');
 const bookRouter = require('./routes/book');
 const orderRouter = require('./routes/order');
-const helpRouter = require('./routes/help');
+const userRouter = require('./routes/user');
+//const helpRouter = require('./routes/help');
 
 const Book = require('./models/book');
 const Head_Order = require('./models/head_order');
@@ -22,12 +23,13 @@ const User = require('./models/user');
 /* associations */
 Head_Order.belongsTo(User);
 Detail_Order.belongsTo(Book);
-Detail_Order.hasMany(Head_Order);
+Head_Order.hasMany(Detail_Order);
 
 app.use(homeRouter);
 app.use('/book', bookRouter);
 app.use('/order', orderRouter);
-app.use('/help', helpRouter);
+app.use('/user', userRouter);
+//app.use('/help', helpRouter);
 //app.use('/user', userRouter);
 
 app.listen(3202, () => {
