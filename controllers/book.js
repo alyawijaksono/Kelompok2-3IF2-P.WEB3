@@ -72,13 +72,11 @@ module.exports.deleteBook = (req, res) => {
 }
 
 /* view one book by id*/
-module.exports.getBook = (req, res) => {
+module.exports.getDetail = (req, res) => {
 	Book
-		.findOne({
-			where : {
-				id : req.params.id
-			}
-		})
+		.findByPk(
+			 req.params.id
+		)
 		.then((book) => {
 			res.json(book);
 		})
