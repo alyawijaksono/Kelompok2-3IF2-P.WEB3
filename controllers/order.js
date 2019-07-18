@@ -13,7 +13,7 @@ module.exports.postOrder = (req, res) => {
 		},
 		{
 			qty: 1,
-			bookId: 2
+			bookId: 3
 		}
 	]
 	
@@ -42,7 +42,7 @@ module.exports.getDetailOrder = (req, res) => {
 	HeadOrder
 		.findOne({
 			include: [{model: DetailOrder}],
-			where: {id: 9}
+			where: {id: 4}
 		})
 		.then((order) => {
 			res.json(order)

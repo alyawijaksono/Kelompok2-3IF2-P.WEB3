@@ -2,15 +2,20 @@
 	<label>Ini Halaman User</label>
 	<br>
 	<br>
-	<a href="/book/list">List Buku</a>
+	<form action="/book/list" method="get">
+	<button type="submit" class="btn btn-primary">List Buku</button>
+	</form>
 	<br>
+	<form action="/book/detail/1" method="get">
+	<button type="submit" class="btn btn-primary">Detail Buku</button>
+	</form>
 	<br>
-    <a href="/book/detail/1">Detail Buku</a>
-	<br/>
 	<form action="/order/add" method="post">
-		<button type="submit" class="btn btn-primary">Order Buku</button>
+	<button type="submit" class="btn btn-primary">Order Buku</button>
 	</form>
 	<br/>
-	<a href="/order/detail">Lihat</a>
+	<form action="/order/detail" method="get">
+	<button type="submit" class="btn btn-primary">Detail Order Buku</button>
+	</form>
 	
 <%- include ./partials/footer %>

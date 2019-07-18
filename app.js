@@ -13,8 +13,6 @@ const homeRouter = require('./routes/home');
 const bookRouter = require('./routes/book');
 const orderRouter = require('./routes/order');
 const userRouter = require('./routes/user');
-const loginRouter = require('./routes/login');
-//const helpRouter = require('./routes/help');
 
 const Book = require('./models/book');
 const Head_Order = require('./models/head_order');
@@ -30,9 +28,6 @@ app.use(homeRouter);
 app.use('/book', bookRouter);
 app.use('/order', orderRouter);
 app.use('/user', userRouter);
-app.use('/login', loginRouter);
-//app.use('/help', helpRouter);
-//app.use('/user', userRouter);
 
 app.listen(3202, () => {
     console.log('server started');

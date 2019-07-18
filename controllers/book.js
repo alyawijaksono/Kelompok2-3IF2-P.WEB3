@@ -1,13 +1,5 @@
 const Book = require('../models/book');
 
-/* view list book */
-module.exports.getIndexBook = (req, res) => {
-	Book
-		.findAll({
-			attributes: ['title', 'desc', 'price', 'size', 'writer', 'publisher', 'page', 'year_of_publish', 'isbn', 'category']
-		})
-}
-
 /* create new book */
 module.exports.postBook = (req, res) => {
 	Book.create({
@@ -30,7 +22,7 @@ module.exports.postBook = (req, res) => {
 	})
 }
 
-/* for put data of book */
+/* untuk mengubah buku yang memiliki id: 1 */
 module.exports.putBook = (req, res) => {
 	let values = {
 		title: "Buku Kesehatan",
@@ -58,11 +50,11 @@ module.exports.putBook = (req, res) => {
 		})
 }
 
-/* delete the book */
+/* untuk menghapus buku yang memiliki id:2 */
 module.exports.deleteBook = (req, res) => {
 	Book.destroy({
 		where: {
-			id: 2
+			id: 1
 		}
 	}).then((book) => {
 		res.json(book);

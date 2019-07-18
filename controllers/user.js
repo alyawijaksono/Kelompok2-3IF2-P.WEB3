@@ -8,20 +8,20 @@ module.exports.postUser = (req, res) => {
 	var values = [
 		{
 			name: "Yuli Rahayu",
-			username: "ulie",
-			password: "haikevin",
+			username: "yulirahayu25",
+			password: "12345",
 			roles: "admin"
 		},
 		{
-			name: "Alya Sono",
+			name: "Alya Ainun",
 			username: "aleee",
-			password: "istrinyaragil",
+			password: "12345",
 			roles: "user"
 		},
 		{
-			name: "Faradul",
+			name: "Faradilla",
 			username: "dilla",
-			password: "tidakbikinkembung",
+			password: "12345",
 			roles: "user"
 		}
 	]
