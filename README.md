@@ -40,6 +40,6 @@ Note:
  3. Kunjungi link localhost:3202/dashboard untuk mengunjungi hasil tugas besar kami dari sisi user. Pada halaman tersebut, telah tesedia button.
 - [User] default user yang akan order buku adalah user dengan id: 2 (ada di controller order)
 - [User] default buku yang akan diorder adalah buku dengan id:1 dan 3 (ada di controller order)
-- [User] user dapat melihat detail order dengan id (order): 3
+- [User] user dapat melihat detail order dengan id (order): 4
 - [User] user dapat melihat detail buku dengan id (buku): 1
 - [User] user dapat melihat list buku yang tersedia
