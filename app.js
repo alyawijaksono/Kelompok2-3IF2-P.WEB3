@@ -17,9 +17,10 @@ const helpRouter = require('./routes/help');
 const Book = require('./models/book');
 const Head_Order = require('./models/head_order');
 const Detail_Order = require('./models/detail_order');
+const User = require('./models/user');
 
 /* associations */
-//Head_Order.belongsTo(User);
+Head_Order.belongsTo(User);
 Detail_Order.belongsTo(Book);
 Detail_Order.hasMany(Head_Order);
 
