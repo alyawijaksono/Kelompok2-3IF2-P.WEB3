@@ -7,7 +7,7 @@ const bookController = require('../controllers/book');
 router.get('/', bookController.getIndexBook);
 
 /* untuk menerima data buku */
-router.get('/', bookController.getBook);
+//router.get('/', bookController.getBook);
 
 /* untuk mengirim data */
 router.post('/add', bookController.postBook);
@@ -21,5 +21,8 @@ router.post('/delete/:id', bookController.deleteBook);
 
 //*Untuk Lihat semua List Buku */
 router.get('/list',bookController.getList);
+
+/*untuk lihat satu buku*/
+router.get('/detail/:id', bookController.getDetail);
 
 module.exports = router;
