@@ -15,12 +15,11 @@ const orderRouter = require('./routes/order');
 const helpRouter = require('./routes/help');
 
 const Book = require('./models/book');
-const User = require('./models/user');
 const Head_Order = require('./models/head_order');
 const Detail_Order = require('./models/detail_order');
 
 /* associations */
-Head_Order.belongsTo(User);
+//Head_Order.belongsTo(User);
 Detail_Order.belongsTo(Book);
 Detail_Order.hasMany(Head_Order);
 
@@ -28,6 +27,7 @@ app.use(homeRouter);
 app.use('/book', bookRouter);
 app.use('/order', orderRouter);
 app.use('/help', helpRouter);
+//app.use('/user', userRouter);
 
 app.listen(3202, () => {
     console.log('server started');
