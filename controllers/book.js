@@ -62,7 +62,7 @@ module.exports.putBook = (req, res) => {
 module.exports.deleteBook = (req, res) => {
 	Book.destroy({
 		where: {
-			id: 2
+			id: 1
 		}
 	}).then((book) => {
 		res.json(book);
