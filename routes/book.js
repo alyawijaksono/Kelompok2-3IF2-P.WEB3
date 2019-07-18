@@ -19,4 +19,7 @@ router.post('/edit/:id', bookController.putBook);
 //router.delete('/delete/:id', bookController.deleteBook);
 router.post('/delete/:id', bookController.deleteBook);
 
+//*Untuk Lihat semua List Buku */
+router.get('/list',bookController.getList);
+
 module.exports = router;

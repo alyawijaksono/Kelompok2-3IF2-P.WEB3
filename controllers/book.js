@@ -86,3 +86,16 @@ module.exports.getBook = (req, res) => {
 			throw error;
 		})
 }
+
+/* view all book*/
+module.exports.getList = (req, res) => {
+	Book
+		.findAll({
+		})
+		.then((book) => {
+			res.json(book);
+		})
+		.catch((error) => {
+			throw error;
+		})
+}
