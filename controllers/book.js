@@ -48,7 +48,7 @@ module.exports.putBook = (req, res) => {
 	Book
 		.update(values, {
 			where: {
-				id: 2
+				id: 1
 			}
 		})
 		.then((book) => {
@@ -62,7 +62,7 @@ module.exports.putBook = (req, res) => {
 module.exports.deleteBook = (req, res) => {
 	Book.destroy({
 		where: {
-			id: 1
+			id: 2
 		}
 	}).then((book) => {
 		res.json(book);
