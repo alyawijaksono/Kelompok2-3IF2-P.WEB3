@@ -21,17 +21,31 @@ module.exports.postOrder = (req, res) => {
 		.create(values)
 		.then((ord) => {
 			for(i=0; i<detail.length; i++){
-				detail[i].orderId = ord.id
+				detail[i].headOrderId = ord.id
 			}
 			
 			DetailOrder
 				.bulkCreate(detail)
 				.then((detail) => {
-					res.json(ord, detail)
+					res.json(detail)
 				})
 				.catch((error) => {
 					console.log(error)
 				})
+		})
+		.catch((error) => {
+			console.log(error)
+		})
+}
+
+module.exports.getDetailOrder = (req, res) => {
+	HeadOrder
+		.findOne({
+			include: [{model: DetailOrder}],
+			where: {id: 9}
+		})
+		.then((order) => {
+			res.json(order)
 		})
 		.catch((error) => {
 			console.log(error)
