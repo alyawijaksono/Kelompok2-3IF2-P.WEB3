@@ -8,7 +8,7 @@ Nama Anggota Kelompok :
 Note:
  1. Nama Database: if2_kelompok2_bookstore
  
- 2. Kunjungi link localhost:3202/admin untuk mengunjungi hasil tugas besar kami dari sisi admin. Pada halaman tsb telah tersedia button.
+ 2. Kunjungi link localhost:159.89.194.18/admin untuk mengunjungi hasil tugas besar kami dari sisi admin. Pada halaman tsb telah tersedia button.
  - [Admin] default data buku yang akan diinput adalah :
         {
           title: "Buku Komputer",
@@ -37,7 +37,7 @@ Note:
             }
 - [Admin] default buku yang akan dihapus adalah buku dengan id:1
 
- 3. Kunjungi link localhost:3202/dashboard untuk mengunjungi hasil tugas besar kami dari sisi user. Pada halaman tersebut, telah tesedia button.
+ 3. Kunjungi link localhost:159.89.194.18/dashboard untuk mengunjungi hasil tugas besar kami dari sisi user. Pada halaman tersebut, telah tesedia button.
 - [User] default user yang akan order buku adalah user dengan id: 2 (ada di controller order)
 - [User] default buku yang akan diorder adalah buku dengan id:1 dan 3 (ada di controller order)
 - [User] user dapat melihat detail order dengan id (order): 4
